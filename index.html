@@ -5,6 +5,7 @@
 	<!-- Basic -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Shubhayan Saha Resume</title>
+	<meta name="color-scheme" content="dark light">
 	<meta name="description" content="This is a CV | Resume of Shubhayan Saha.">
 	<meta name="keywords" content="resume format,resume samples,resume builder,resume templates,resume meaning,resume for freshers
 ,resume maker
@@ -38,7 +39,9 @@
 	
 </head>
 
-<body>	
+<body class="darko" id="darko">	
+
+
 	
 	<!-- Preloader -->
 	<div class="preloader">
@@ -61,10 +64,16 @@
 				<a href="#" class="menu-btn"><span></span></a>
 				<div class="top-menu">
 					<ul>
+						
 						<li><a href="https://raw.githubusercontent.com/ShubhayanS/CVWeb/master/ShubhayanS%20Resume-compressed.pdf" class="lnk">View CV</a></li>
 						</li>
 						<li><a href="https://linktr.ee/shubhayans"> Quick Links</a></li>
 						<li><a href="#sec" class="btn">Contact Me</a></li>
+						<li><label class="switch">
+							<input onclick="myFunction()" class="darko-toggle" id="darko-toggle" type="checkbox" checked >
+							<span class="slider round"></span>
+						  </label></li>
+						
 					</ul>
 				</div>
 				
@@ -79,7 +88,7 @@
 				<div class="centrize full-width">
 					<div class="vertical-center">
 						<div class="started-content">
-							<div class="h-title glitch-effect" data-text="I'm Shubhayan Saha">I'm <span>Shubhayan Saha</span></div>
+							<div class="h-title glitch-effect" data-text="I'm Shubhayan Saha" >I'm <span>Shubhayan Saha</span></div>
 							<div class="h-subtitle typing-subtitle">
 								<p>Full Stack Developer.</p>
                                 <p>Artificial Intelligence.</p>
@@ -98,11 +107,11 @@
 					<div class="title">
 						<div class="title_inner">About Me</div>
 					</div>
-					<div class="image">
+					<div class="image inverted" >
 						<img src="images/me.jpeg" alt="" />
 					</div>
 					<div class="desc">
-						<p>
+						<p class="">
 							They say AI and blockchain is the future of our generation but I believe it's much more than that. Well, I plan on integrating ML, AI and blockchain in the future. Moreover just to mention actively working towards my goals and ambitions of life; also looking for internships and opportunities. 
 						</p>
 						<div class="info-list">
@@ -746,6 +755,8 @@ Dialogueflow by Google and Node.js as backend for API call.
 					<div class="clear"></div>
 				</div>
 			</div>
+
+			
 		<section class="2" id="sec">
 		<div class="section contacts" >
 				<div class="content">
@@ -758,8 +769,7 @@ Dialogueflow by Google and Node.js as backend for API call.
 							<div class="name">Phone</div>
 							<p>
 								+ (91) 9994189700
-							</p>
-						</div>
+							</p></div>
 						<div class="service-item">
 							<div class="icon"><span class="ion ion-email"></span></div>
 							<div class="name">Email</div>
@@ -786,7 +796,7 @@ Dialogueflow by Google and Node.js as backend for API call.
 							<div class="group-val ct-gr">
 								<textarea class="form-control" name="message" placeholder="Message"></textarea>
 							</div>
-                           <input value="Send Message" type="submit" style="background-color: #f26b38;color: white;">
+                           <input value="Send Message" type="submit" class="inp">
 						</form>
 						<div class="alert-success">
 							<p>
@@ -796,7 +806,12 @@ Dialogueflow by Google and Node.js as backend for API call.
 					</div>
 				</div>
 			</div>
+		
+			
 		</section>
+
+
+		<!-- <button onclick="myFunction()">Toggle dark mode</button> -->
 		</div>
 		
 		
@@ -808,11 +823,15 @@ Dialogueflow by Google and Node.js as backend for API call.
 				<a target="_blank" href="https://twitter.com/Shubhayan9"><span class="ion ion-social-twitter"></span></a>
 				<a target="_blank" href="https://github.com/ShubhayanS"><span class="ion ion-social-github"></span></a>
 				<a target="_blank" href="https://www.instagram.com/shubhayans007/"><span class="ion ion-social-instagram-outline"></span></a>
+				<!-- <p id="demo"></p> -->
+				
 			</div>
+
+		
 			<div class="copy">© 2019. All rights reserved.</div>
 			<div class="clr"></div>
 		</footer>
-		
+	
 		<!-- Lines -->
 		<div class="line top"></div>
 		<div class="line bottom"></div>
@@ -822,6 +841,75 @@ Dialogueflow by Google and Node.js as backend for API call.
 	</div>
 	
 	<!-- jQuery Scripts -->
+
+
+	<script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+
+
+<script>
+
+
+
+
+
+	document.onkeypress=function(e){
+		e = e|| window.event;
+		if(e.keyCode == 13){
+			document.documentElement.classList.toggle('dark-mode');
+			document.querySelectorAll('.inverted').forEach((result) => { 
+				result.classList.toggle('invert')
+			})
+		}
+
+	}
+	function myFunction() {
+   var element = document.body;
+   
+
+   var flag =1;
+   
+if(localStorage.getItem("flag") ==1)
+{
+ var x = localStorage.getItem("flag");
+ element.classList.toggle("darko");
+ document.getElementById("demo").innerHTML = 0;
+localStorage.removeItem("flag")
+}
+else{
+
+element.classList.toggle("darko");
+localStorage.flag = flag;
+var x = localStorage.getItem("flag");
+ document.getElementById("demo").innerHTML = x;
+
+}
+
+
+
+   
+}
+
+</script>
+
+
+
+
     <script src="js/jquery.min.js"></script>
 	<script src="js/jquery.validate.js"></script>
 	<script src="js/typed.js"></script>
