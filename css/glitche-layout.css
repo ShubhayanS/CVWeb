@@ -753,7 +753,7 @@ header .head-top .top-menu ul li.active .btn {
 }
 
 .box-items .box-item:hover .desc .name {
-  color: var(--btn);
+  color: #f26b38;
 }
 
 .box-items .box-item .image {
@@ -1010,7 +1010,7 @@ footer .copy {
 .popup-box {
   margin: 30px auto;
   width: 520px;
-  background: #ffffff;
+  background: var(--background);
   position: relative;
   padding: 10px;
 }
