@@ -103,7 +103,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: black;
+  background-color: var(--toggle);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -119,7 +119,9 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
+/* input {
+  background-color: #f26b38 !important;
+} */
 input:checked + .slider {
   background-color: var(--toggle);
 }
