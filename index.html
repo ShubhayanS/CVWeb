@@ -919,32 +919,37 @@ Dialogueflow by Google and Node.js as backend for API call.
 		}
 
 	}
-	function myFunction() {
-   var element = document.body;
-   
 
-   var flag =1;
-   
-if(localStorage.getItem("flag") ==1)
+
+// Dark Mode Storage JS
+
+var element = document.body;
+if(localStorage.getItem("flag") =="1")
 {
- var x = localStorage.getItem("flag");
- element.classList.toggle("darko");
- document.getElementById("demo").innerHTML = 0;
-localStorage.removeItem("flag")
+ element.classList.add("darko");
 }
 else{
-
-element.classList.toggle("darko");
-localStorage.flag = flag;
-var x = localStorage.getItem("flag");
- document.getElementById("demo").innerHTML = x;
-
+element.classList.remove("darko");
 }
+// Button myFunction call
 
-
-
-   
+function myFunction()
+{
+if(localStorage.getItem("flag") =="1")
+{
+ element.classList.remove("darko");
+localStorage.setItem("flag","0")
 }
+else{
+element.classList.add("darko");
+localStorage.setItem("flag","1")
+//  document.getElementById("demo").innerHTML = x;
+}
+}
+// Dark Mode Js ends
+
+
+
 
 </script>
 
